@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Datos en JavaScript</title>
+    <script src="scripts.js" defer></script>
+    <style>
+        /* Estilos básicos para la presentación */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        #lista-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 50px;
+        }
+        .item {
+            display: block;
+            background-color: #f0f0f0;
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        button { margin-top: 5px; padding: 8px; cursor: pointer; }
+        .acciones button { margin-right: 10px; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Manejo de Datos en JavaScript</h1>
+
+    <form id="formulario-datos">
+        <input type="text" id="campo-entrada" placeholder="Introduce un elemento aquí">
+        <button type="submit">Añadir Elemento</button>
+        <p id="mensaje-error" class="error"></p>
+    </form>
+
+    <hr>
+
+    <h2>Lista de Elementos</h2>
+
+    <div class="acciones">
+        <button onclick="eliminarPrimero()">Eliminar el Primero (shift)</button>
+        <button onclick="eliminarUltimo()">Eliminar el Último (pop)</button>
+        <button onclick="ordenarLista()">Ordenar (sort)</button>
+    </div>
+
+    <div id="lista-container">
+    </div>
+
+</body>
+</html>
